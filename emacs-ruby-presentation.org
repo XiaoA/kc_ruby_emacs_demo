@@ -16,6 +16,18 @@ I'm not trying to convince anyone to use Emacs, but I'd like to share some conce
 - Keyboard shortcuts
 - Vim/Emacs comparison
 - Why Emacs is right /for me/...
+*** Typical Criticisms
+- Too big/Memory Hog
+  - Hi. It's 2015.
+- Keyboard shortcuts terrible
+  - Maybe not as bad as you think
+    - Logical and fast when you learn them
+    - RSI? Show me even one reliable study...
+  - Don't like them? Change them!
+- Does more than an editor should/Doesn't follow 'Unix Way'
+  + Emacs isn't just an editor. It's a Lisp evaluation system, with buffers that interact with the underlying OS.
+  + So? Don't use the extra features. (Who said the 'Unix Way' was infallible?)
+  + So does my smartphone... :)
 ** Terminology/Key Concepts
 - Window
 - Frame
@@ -45,6 +57,11 @@ I'm not trying to convince anyone to use Emacs, but I'd like to share some conce
 - [[http://www.orgmode.org][Org-Mode]]
   + Org-Babel/Literate Programming
   + There's a Vim Port! https://github.com/hsitz/VimOrganizer
+  + MEMACS/Quantified Self
+    * [[http://arxiv.org/pdf/1304.1332v1.pdf][What really happened on September 15th 2008? Getting The Most from Your Personal Information with Memacs]]
+    * 
+
+
 - [[https://github.com/magit/magit][Magit]]: Use Git in Emacs.
   + http://endlessparentheses.com/create-github-prs-from-emacs-with-magit.html
 - [[https://github.com/emacs-helm/helm][Helm]]
@@ -65,4 +82,9 @@ I'm not trying to convince anyone to use Emacs, but I'd like to share some conce
 - [[http://www.gnu.org/software/emacs/][Emacs Homepage]]
 - [[http://emacsrocks.com/][Emacs Rocks!]]
 - [[http://www.emacswiki.org/][Emacs Wiki]]
-
+*** Gurus
+- [[http://sachachua.com/blog/][Sacha Chua]]
+- [[http://www.slideshare.net/yukihiro_matz/how-emacs-changed-my-life][Matz: "How Emacs Changed My Life"]]
+- [[http://batsov.com/][Bozhidar Batsov]]
+  + RUBOCOP
+  + Ruby Style Guide
