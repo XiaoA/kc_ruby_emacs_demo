@@ -1,0 +1,68 @@
+#+TITLE: KCRuby Emacs Demo
+#+AUTHOR: Andrew Buckingham
+#+DATE: July, 14, 2015
+#+HTML_LINK_HOME: https://github.com/XiaoA/kc_ruby_emacs_demo
+#+STARTUP: indent
+#+OPTIONS: num:nil
+#+TODO: TODO(t) | | Started(s) | Waiting(w) | Someday/Maybe(m) | Canceled(c) | DONE(d)(@) | Meeting(M) | Note(n)
+
+** Self-Introduction
+- Name
+- Website/Twitter/Github
+** Introduction
+- No flames/editor wars
+I'm not trying to convince anyone to use Emacs, but I'd like to share some concepts that might be interesting/useful.
+- Documentation
+- Keyboard shortcuts
+- Vim/Emacs comparison
+- Why Emacs is right /for me/...
+** Terminology/Key Concepts
+- Window
+- Frame
+- Buffer
+- Mark
+- Point
+- Kill
+- Yank
+- Incremental Search
+- Regex
+** Setup and Customization
+- Line Numbers
+- PowerLine
+- Emacs is *100% Extensible* and fully documented
+  - .emacs.d
+  - Great for learning programming
+** Stupid Ruby Tricks
+- [[https://github.com/stanaka/dash-at-point][dash-at-point.el]]
+  + [[https://kapeli.com/dash][Dash]] is an API documentation browser (OSX only, I believe). You can integrate it with Emacs.
+  + Mac App Store link: https://itunes.apple.com/us/app/dash-api-docs-snippets/id458034879?mt=12
+- [[http://batsov.com/projectile/][Projectile]]
+- Robe
+- [[https://github.com/eschulte/rinari][Rinari]] (Rinari Is not a Rails IDE)
+- Ruby Console/Server in an Emacs Buffer...
+** Cool Stuff I Use
+- An Awesome Package Installer
+- [[http://www.orgmode.org][Org-Mode]]
+  + Org-Babel/Literate Programming
+  + There's a Vim Port! https://github.com/hsitz/VimOrganizer
+- [[https://github.com/magit/magit][Magit]]: Use Git in Emacs.
+  + http://endlessparentheses.com/create-github-prs-from-emacs-with-magit.html
+- [[https://github.com/emacs-helm/helm][Helm]]
+- [[http://ess.r-project.org][ESS (Emacs Speaks Statistics)]]
+- Shells/Terminals in Emacs buffers
+** Cool Stuff I Don't Use
+- Evil Mode: Use Vim in Emacs
+  + [[https://bitbucket.org/lyro/evil/wiki/Home][Evil Mode]]
+  + [[https://github.com/syl20bnr/spacemacs][spaceemacs]]
+- [[http://www.gnus.org][Gnus]]
+- [[https://github.com/hayamiz/twittering-mode][Twittering Mode]]
+- [[https://www.gnu.org/software/auctex/img/preview-screenshot.png][AucTex]]
+** Insanity
+- Games
+- Video Editing
+- Vimgolf in Emacs
+** Useful links 
+- [[http://www.gnu.org/software/emacs/][Emacs Homepage]]
+- [[http://emacsrocks.com/][Emacs Rocks!]]
+- [[http://www.emacswiki.org/][Emacs Wiki]]
+
