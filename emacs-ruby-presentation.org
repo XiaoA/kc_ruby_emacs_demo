@@ -36,8 +36,20 @@ I'm not trying to convince anyone to use Emacs, but I'd like to share some conce
 - Point
 - Kill
 - Yank
-- Incremental Search
+- Macros
+- Registers
+- Rectangle Editing
 - Regex
+  + Regex Builder
+  + Incremental Search/Replace
+  + replace-regexp
+  + query-replace
+  + flush-lines
+  + keep-lines
+
+- Undo Tree
+  + https://elpa.gnu.org/packages/undo-tree-readme.txt
+
 ** Setup and Customization
 - Line Numbers
 - PowerLine
