@@ -7,38 +7,59 @@
 #+TODO: TODO(t) | | Started(s) | Waiting(w) | Someday/Maybe(m) | Canceled(c) | DONE(d)(@) | Meeting(M) | Note(n)
 
 ** Self-Introduction
-- Name
-- Website/Twitter/Github
+- Andrew Buckingham
+- http://andrewbuckingham.net
+- @abuckingham
+- abuckingham99@gmail.com / andrew@andrewbuckingham.net
+
 ** Introduction
 - No flames/editor wars
 I'm not trying to convince anyone to use Emacs, but I'd like to share some concepts that might be interesting/useful.
-- Documentation
-- Keyboard shortcuts
-- Vim/Emacs comparison
+- Documentation (C-h ?)
 - Why Emacs is right /for me/...
 *** Typical Criticisms
 - Too big/Memory Hog
-  - Hi. It's 2015.
+  - Hi. It's 2015. Not an issue anymore. :)
+- Too slow to start up
+You can start it when you start up your computer, and keep it open. Emacs was designed to have a lot of buffers going.
+To speed up Emacs, you can use the daemon-mode/emacsclient. From my .bash_profile:
+
+#+BEGIN_SRC sh
+# Prefer console Emacs
+alias emacs=/Applications/Emacs.app/Contents/MacOS/Emacs
+alias e='emacsclient -t'
+alias ec='emacsclient -c'
+#+END_SRC
+
 - Keyboard shortcuts terrible
-  - Maybe not as bad as you think
+  - Maybe not as bad as you think (shared with OSX)
     - Logical and fast when you learn them
-    - RSI? Show me even one reliable study...
-  - Don't like them? Change them!
+      + Ctrl-X (C-x) is for system functions
+      + C-C is for minor-mode/personal shortcuts
+      + You can also rebind Cmd, Ctrl, Caps, and have more keys
+    - RSI? No reliable studies...
+  - Don't like them? Change them! ([[http://www.emacswiki.org/emacs/Evil][Evil-Mode]] gives you the best Vim emulator, in Emacs!)
+
 - Does more than an editor should/Doesn't follow 'Unix Way'
   + Emacs isn't just an editor. It's a Lisp evaluation system, with buffers that interact with the underlying OS.
-  + So? Don't use the extra features. (Who said the 'Unix Way' was infallible?)
-  + So does my smartphone... :)
-** Terminology/Key Concepts
-- Window
-- Frame
-- Buffer
-- Mark
-- Point
-- Kill
-- Yank
+  + Vim is moving away from this, too. See Tim Pope's plugins... :)
+  + If you use your browser to check mail, twitter, todos, is that the Unix Way...?
+  + So? 
+** Features
+- Kill/Yank
+  + C-K to kill from point to end of line/sentence/block
+  + C-A C-K: moves to front of line and then kills like (or Ctrl-Shift Delete)
 - Macros
+  - F3 to start
+  - F4 to finish
+  - F4 to run (prepend with Ctrl and a number to have it run that number of times; C-0 will make it run to the end of the file).
+  - <C-X C-K e> to edit the macro
+  - <C-X C-K n> to name the macro
+  - <C-X C-K i> to insert a compiled version of the macro (useful for your .emacs, to make it a permanent new feature)
 - Registers
+Just like Vim, you can use registers to store text.
 - Rectangle Editing
+Similar to Vim's "Visual Mode"
 - Regex
   + Regex Builder
   + Incremental Search/Replace
@@ -50,12 +71,16 @@ I'm not trying to convince anyone to use Emacs, but I'd like to share some conce
 - Undo Tree
   + https://elpa.gnu.org/packages/undo-tree-readme.txt
 
+Everything that you do in Emacs is saved, and you can go to any point in your history to recover your work. Most applications have only a simple, linear undo. 
 ** Setup and Customization
-- Line Numbers
-- PowerLine
+- Line Numbers (linum-mode)
+- PowerLine 
 - Emacs is *100% Extensible* and fully documented
   - .emacs.d
+    https://github.com/XiaoA/.emacs.d
   - Great for learning programming
+    [[info:Elisp][Elisp]]
+
 ** Stupid Ruby Tricks
 - [[https://github.com/stanaka/dash-at-point][dash-at-point.el]]
   + [[https://kapeli.com/dash][Dash]] is an API documentation browser (OSX only, I believe). You can integrate it with Emacs.
@@ -65,20 +90,50 @@ I'm not trying to convince anyone to use Emacs, but I'd like to share some conce
 - [[https://github.com/eschulte/rinari][Rinari]] (Rinari Is not a Rails IDE)
 - Ruby Console/Server in an Emacs Buffer...
 ** Cool Stuff I Use
-- An Awesome Package Installer
+- An Awesome Package Installer. Install a package and use it in seconds.
 - [[http://www.orgmode.org][Org-Mode]]
-  + Org-Babel/Literate Programming
+  + PIM/Time clock/Wiki/GTD or Todo manager/Document Preparation
   + There's a Vim Port! https://github.com/hsitz/VimOrganizer
   + MEMACS/Quantified Self
     * [[http://arxiv.org/pdf/1304.1332v1.pdf][What really happened on September 15th 2008? Getting The Most from Your Personal Information with Memacs]]
-    * 
+  + Org-Babel/Literate Programming
+*** Org-Babel/Literate Programming Demo
 
+You can create a document that includes embedded code. You can evaluate the code in the buffer, or *tangle* it (creating an external file or group of files)
+
+- Supported languages: http://orgmode.org/manual/Languages.html#Languages
+- Note: Show this example from my old Ruby notes...
+  [[file:~/tealeaf/pre-course1/learn_ruby/notes.org][notes.org (Pre-Course1)]]
+  Go to: *File:* [[07_arrays/include_3_corrected.rb]]
+*** TODO Fix syntax error in [[07_arrays/include_3_corrected.rb]]      :kcruby:
+
+Here is is a file, split into three blocks:
+
+#+BEGIN_SRC ruby :tangle org_babel_demo.rb
+puts "This is the first line"
+#+END_SRC
+
+#+BEGIN_SRC ruby :tangle org_babel_demo.rb
+puts "This is the second line"
+#+END_SRC
+
+#+BEGIN_SRC ruby :tangle org_babel_demo.rb
+puts "Can you guess which line this is?"
+#+END_SRC
+
+*To tangle the files, type: <C-c C-v t>*
 
 - [[https://github.com/magit/magit][Magit]]: Use Git in Emacs.
   + http://endlessparentheses.com/create-github-prs-from-emacs-with-magit.html
 - [[https://github.com/emacs-helm/helm][Helm]]
 - [[http://ess.r-project.org][ESS (Emacs Speaks Statistics)]]
 - Shells/Terminals in Emacs buffers
+  + Emacs Eshell (with some extra features not included in Emacs yet...) was used in Tron Legacy
+    [[file:emacs.jpg][Eshell in Tron Legacy]]
+- Ace Jump Mode: https://github.com/winterTTr/ace-jump-mode
+- Vim has something similar: [[https://github.com/easymotion/vim-easymotion][vim-easymotion]]
+- Sublime 2: https://github.com/tednaleid/sublime-EasyMotion
+- Sublime 3: https://github.com/ice9js/ace-jump-sublime
 ** Cool Stuff I Don't Use
 - Evil Mode: Use Vim in Emacs
   + [[https://bitbucket.org/lyro/evil/wiki/Home][Evil Mode]]
@@ -90,13 +145,18 @@ I'm not trying to convince anyone to use Emacs, but I'd like to share some conce
 - Games
 - Video Editing
 - Vimgolf in Emacs
+  https://vimeo.com/timvisher/videos/search:Vimgolf/sort:date
 ** Useful links 
 - [[http://www.gnu.org/software/emacs/][Emacs Homepage]]
 - [[http://emacsrocks.com/][Emacs Rocks!]]
 - [[http://www.emacswiki.org/][Emacs Wiki]]
 *** Gurus
+- [[https://twitter.com/steve_yegge][Steve Yegge]]
+- [[http://www.sanityinc.com/][Steve Purcell]]
 - [[http://sachachua.com/blog/][Sacha Chua]]
 - [[http://www.slideshare.net/yukihiro_matz/how-emacs-changed-my-life][Matz: "How Emacs Changed My Life"]]
 - [[http://batsov.com/][Bozhidar Batsov]]
   + RUBOCOP
   + Ruby Style Guide
+
+
