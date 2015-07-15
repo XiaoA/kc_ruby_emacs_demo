@@ -109,9 +109,6 @@ Everything that you do in Emacs is saved, and you can go to any point in your hi
 You can create a document that includes embedded code. You can evaluate the code in the buffer, or *tangle* it (creating an external file or group of files)
 
 - Supported languages: http://orgmode.org/manual/Languages.html#Languages
-- Note: Show this example from my old Ruby notes...
-  [[file:~/tealeaf/pre-course1/learn_ruby/notes.org][notes.org (Pre-Course1)]]
-  Go to: *File:* [[07_arrays/include_3_corrected.rb]]
 
 Here is is a file, split into three blocks:
 
