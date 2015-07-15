@@ -112,8 +112,6 @@ You can create a document that includes embedded code. You can evaluate the code
 - Note: Show this example from my old Ruby notes...
   [[file:~/tealeaf/pre-course1/learn_ruby/notes.org][notes.org (Pre-Course1)]]
   Go to: *File:* [[07_arrays/include_3_corrected.rb]]
-*** DONE Fix syntax error in [[07_arrays/include_3_corrected.rb]]      :kcruby:
-CLOSED: [2015-07-14 Tue 23:25]
 
 Here is is a file, split into three blocks:
 
@@ -130,6 +128,16 @@ puts "Can you guess which line this is?"
 #+END_SRC
 
 *To tangle the files, type: <C-c C-v t>*
+
+Because they're tangled to the same file, it looks like this:
+
+#+BEGIN_SRC ruby
+puts "This is the first line"
+puts "This is the second line"
+puts "Can you guess which line this is?"
+#+END_SRC
+
+You can view the file here: [[file:org_babel_demo.rb]]
 
 - [[https://github.com/magit/magit][Magit]]: Use Git in Emacs.
   + http://endlessparentheses.com/create-github-prs-from-emacs-with-magit.html
